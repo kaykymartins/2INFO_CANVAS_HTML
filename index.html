@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>canvas-etec</title>
+
+    <style type="text/css">
+    body{
+        margin:0px;
+    
+    }
+    </style>
+
+</head>
+<body data-rsssl=1>
+    <canavas id="canvas"></canavas>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js">
+    </script>
+    <script type="text/javascript">
+    function banner(){
+     
+     var keyword = "ETEC"
+     var canvas;
+     var context;
+
+     var bgcanvas;
+     var bgcontext
+
+     var denseness = 10;
+
+     var parts =[];
+   
+    var mouse ={x:-100,y:-100};
+    var mouseOnScreen = false;
+
+    var itercout = 0;
+    var itertot = 40;
+
+    this.initialize = function(canvas_id){
+        canvas = document.getElementById(canvas_id);
+        context = canvas.getContext('2d');
+
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        bgcanvas = document.createElement('canvas');
+        bgcontext = bgcanvas.getContext('2d');
+
+        bgcanvas.width = window.innerwidth;
+        bgcanavs.height = window.innerHeight;
+
+        canvas.addEventListener('mousemove', MouseMove, false);
+        canvas.addEventListener('mouseout',MouseOut,false);
+        start();
+
+    }
+ 
+ vas start = function(){
+       
+       bgcontext.fillStyle ="#000000";
+       bgcontext.font= '300px impact';
+       bgcontext.fillText(keyword, 85,275);
+
+       clear();
+       getCoords();
+
+ }
+
+ 
+    
+    </script>
+
+</body>
+</html>
